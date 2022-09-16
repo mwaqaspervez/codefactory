@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  codefactory:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: codefactory
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
